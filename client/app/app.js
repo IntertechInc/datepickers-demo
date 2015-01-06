@@ -5,7 +5,10 @@ angular.module('datePickerDemoApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'datePicker',
+  'ui.date',
+  'ngQuickDate'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
