@@ -1,0 +1,47 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>DatePicker Demo</h1>
+    <p class="lead"></p>
+    <!-- <img src="assets/images/yeoman.png" alt="I'm Yeoman"> -->
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Native</h2>
+      <input type="date" ng-model="selectedDate" />
+      <ul>
+        <li>Supports date range restrictions.</li>
+        <li>Otherwise pretty limited in terms of restricting users.</li>
+        <li>Best mobile device integration because it uses native device controls.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3><a href="http://angular-ui.github.io/bootstrap/#/datepicker">Bootstrap (ui.bootstrap)</a></h3>
+      <p class="input-group">
+        <input type="text" class="form-control" datepicker-popup="{{bootstrap.format}}" ng-model="selectedDate" is-open="bootstrap.opened" min-date="bootstrap.minDate" max-date="'2015-06-22'" datepicker-options="bootstrap.dateOptions" date-disabled="bootstrap.disabled(date, mode)" ng-required="true" close-text="Close" />
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="bootstrap.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+        </span>
+        <ul>
+          <li>Supports min/max dates.</li>
+          <li>Can disable specific days of the week (e.g. weekends).</li>
+        </ul>
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+      
+  </div>
+</footer>
