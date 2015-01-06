@@ -15,9 +15,8 @@
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
       <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
-      <link rel="stylesheet" href="bower_components/angular-datepicker/dist/index.css" />
-      <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css"/>
-      <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date-plus-default-theme.css"/>
+      <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date.css" />
+      <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date-default-theme.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -28,6 +27,9 @@
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="bower_components/angular-datepicker/dist/index.css" />
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date-plus-default-theme.css"/>
   </head>
   <body ng-app="datePickerDemoApp">
     <!--[if lt IE 7]>
@@ -44,7 +46,6 @@
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="bower_components/jquery-ui/jquery-ui.js"></script>
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-resource/angular-resource.js"></script>
       <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -52,7 +53,8 @@
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-      <script src="bower_components/angular-datepicker/dist/index.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
+      <script src="bower_components/jquery-ui/jquery-ui.js"></script>
       <script src="bower_components/angular-ui-date/src/date.js"></script>
       <script src="bower_components/ngQuickDate/dist/ng-quick-date.js"></script>
       <!-- endbower -->
@@ -67,5 +69,6 @@
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->
+    <script src="bower_components/angular-datepicker/dist/index.js"></script>
 </body>
 </html>
