@@ -1,93 +1,112 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>DatePicker Demo</h1>
-    <p class="lead"></p>
-    <!-- <img src="assets/images/yeoman.png" alt="I'm Yeoman"> -->
-  </div>
+    <div class="container">
+        <h1>DatePicker Demo</h1>
+        <p class="lead"></p>
+        <!-- <img src="assets/images/yeoman.png" alt="I'm Yeoman"> -->
+    </div>
 </header>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-12">
 
-      <h3 class="page-header"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input">Native (HTML5)</a></h3>
-      
-      <input type="date" ng-model="selectedDate" />
-      <ul>
-        <li>Supports date range restrictions.</li>
-        <li>Otherwise pretty limited in terms of restricting users.</li>
-        <li>Best mobile device integration because it uses native device controls.</li>
-      </ul>
-      <br/>
+            <h3 class="page-header"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input">Native (HTML5)</a></h3>
 
-      <h4>Using <code>&lt;datalist&gt;</code> which is a white list of allowed dates:</h4>
-      <p class="text-muted">Borrowed from <a href="http://tiffanybbrown.com/2013/10/24/date-input-in-html5-restricting-dates-and-thought-for-working-around-limitations/">http://tiffanybbrown.com/2013/10/24/date-input-in-html5-restricting-dates-and-thought-for-working-around-limitations/</a></p>
-      <input type="date" ng-model="selectedDate" list="thesedates">
-      <datalist id="thesedates">
-        <option label="Groundhog Day">2014-02-02</option>
-        <option label="Valentine's Day">2014-02-14</option>
-        <option label="Flag Day">2014-06-14</option>
-      </datalist>
+            <input type="date" ng-model="selectedDate" />
+            <p>
+                <ul>
+                    <li>Supports date range restrictions.</li>
+                    <li>Otherwise pretty limited in terms of restricting users.</li>
+                    <li>Best mobile device integration because it uses native device controls.</li>
+                </ul>
+            </p>
 
-    </div>
-  </div>
+            <h4>Using <code>&lt;datalist&gt;</code> which is a <s>white list of allowed</s> helper list of dates:</h4>
+            <p class="text-muted">Borrowed from <a href="http://tiffanybbrown.com/2013/10/24/date-input-in-html5-restricting-dates-and-thought-for-working-around-limitations/">http://tiffanybbrown.com/2013/10/24/date-input-in-html5-restricting-dates-and-thought-for-working-around-limitations/</a></p>
+            <input type="date" ng-model="selectedDate" list="thesedates">
+            <datalist id="thesedates">
+                <option label="Groundhog Day">2014-02-02</option>
+                <option label="Valentine's Day">2014-02-14</option>
+                <option label="Flag Day">2014-06-14</option>
+            </datalist>
 
-  <div class="row">
-    <div class="col-sm-6">
-      <h3 class="page-header"><a href="http://angular-ui.github.io/bootstrap/#/datepicker">Bootstrap (ui.bootstrap)</a></h3>
-      <p class="input-group">
-        <input type="text" class="form-control" datepicker-popup="{{bootstrap.format}}" ng-model="selectedDate" is-open="bootstrap.opened" min-date="bootstrap.minDate" max-date="'2015-06-22'" datepicker-options="bootstrap.dateOptions" date-disabled="bootstrap.disabled(date, mode)" ng-required="true" close-text="Close" />
-        <span class="input-group-btn">
-          <button type="button" class="btn btn-default" ng-click="bootstrap.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-        </span>
-        <ul>
-          <li>Supports min/max dates.</li>
-          <li>Can disable specific days of the week (e.g. weekends).</li>
-          <li>Not sure what's going on with the inital format of the date in the input, but I'm sure that can be resolved.</li>
-        </ul>
-      </p>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-12">
-      <h3 class="page-header"><a href="https://github.com/g00fy-/angular-datepicker">angular-datepicker</a></h3>
-      <h4>As a button:</h4>
-      <div class="dropdown">
-        <a class="dropdown-toggle btn btn-danger">
-          Select a date: {{(selectedDate|date)}}
-        </a>
-
-        <div class="dropdown-menu" ng-click="$event.preventDefault();$event.stopPropagation()">
-          <div date-picker="selectedDate" min-view="date"></div>
         </div>
-      </div>
-
-      <h4>As an input:</h4>
-      <input type="text" date-time ng-model="selectedDate" required="true" view="date">
-    </div>
-    
-    <div class="col-sm-12">
-      <h3 class="page-header"><a href="https://github.com/adamalbrecht/ngQuickDate">ngQuickDate</a></h3>
-      <quick-datepicker ng-model='selectedDate'></quick-datepicker>
     </div>
 
-    <div class="col-sm-12">
-      <h3 class="page-header"><a href="https://github.com/angular-ui/ui-date">angular-ui ui-date</a></h3>
-      <input ui-date ng-model="selectedDate">
-      <ul>
-        <li>This is an angular wrapper around jQueryUI's DatePicker. All options that are available for that will work. jQueryUI is required.</li>
-      </ul>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3 class="page-header"><a href="http://angular-ui.github.io/bootstrap/#/datepicker">Bootstrap (ui.bootstrap)</a></h3>
+            <p class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{bootstrap.format}}" ng-model="selectedDate" is-open="bootstrap.opened" min-date="bootstrap.minDate" max-date="'2015-06-22'" datepicker-options="bootstrap.dateOptions" date-disabled="bootstrap.disabled(date, mode)" ng-required="true" close-text="Close" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="bootstrap.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                <ul>
+                    <li>Supports min/max dates.</li>
+                    <li>Can disable specific days of the week (e.g. weekends).</li>
+                    <li>Not sure what's going on with the inital format of the date in the input, but I'm sure that can be resolved.</li>
+                </ul>
+            </p>
+
+        </div>
     </div>
-  </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-header"><a href="https://github.com/g00fy-/angular-datepicker">angular-datepicker</a></h3>
+            <h4>As a button:</h4>
+            <div class="dropdown">
+                <a class="dropdown-toggle btn btn-danger">
+                    Select a date: {{(selectedDate|date)}}
+                </a>
+
+                <div class="dropdown-menu" ng-click="$event.preventDefault();$event.stopPropagation()">
+                    <div date-picker="selectedDate" min-view="date" dismiss="true"></div>
+                </div>
+            </div>
+
+            <h4>As an input:</h4>
+            <input type="text" date-time ng-model="selectedDate" required="true" view="date">
+
+            <p>
+                <ul>
+                    <li>Light-weight.</li>
+                    <li>Doesn't support disabling individual dates out-of-the-box.</li>
+                    <li>Doesn't support disabling weekends out-of-the-box.</li>
+                    <li>The button option doesn't auto-close (out-of-the-box) because it's based on bootstrap dropdown-menu. But a simple modification resolves this.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="col-sm-12">
+            <h3 class="page-header"><a href="https://github.com/adamalbrecht/ngQuickDate">ngQuickDate</a></h3>
+            <quick-datepicker ng-model="selectedDate" date-filter="angularDatePicker.dateFilter" disable-timepicker="true"></quick-datepicker>
+            <p>
+                <ul>
+                    <li>Light-weight. No additional dependencies beside Angular.</li>
+                    <li>Can disable specific days of the week (e.g. weekends).</li>
+                    <li>Can disable specific dates.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="col-sm-12">
+            <h3 class="page-header"><a href="https://github.com/angular-ui/ui-date">angular-ui ui-date</a></h3>
+            <input ui-date ng-model="selectedDate">
+            <p>
+                <ul>
+                    <li>This is an angular wrapper around jQueryUI's DatePicker. All options that are available for that will work. jQueryUI is required.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
 
 </div>
 
 <footer class="footer">
-  <div class="container">
-      
-  </div>
+    <div class="container">
+
+    </div>
 </footer>

@@ -2,7 +2,27 @@
 
 angular.module('datePickerDemoApp').controller('MainCtrl', function ($scope) {
 
-  	$scope.selectedDate = new Date(); //moment().format('MM/DD/YYYY');
+  	$scope.selectedDate = new Date();
+
+  	var disabledDates = [
+  		'01/08/2015'
+  	].map(function(value) {
+  	    return (new Date(value)).toDateString();
+  	});
+
+  	$scope.angularDatePicker = {
+  	    dateFilter: function (d) {
+  	        // disable weekends
+  	        var dayIdx = d.getDay();
+  	        if (dayIdx === 0 || dayIdx === 6) {
+  	            return false;
+  	        }
+  	        if (disabledDates.indexOf(d.toDateString()) > -1) {
+  	            return false;
+  	        }
+  	        return true;
+  	    }
+  	};
 
   	$scope.bootstrap = {
   		clear: function () {

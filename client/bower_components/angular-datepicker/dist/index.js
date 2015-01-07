@@ -8,7 +8,8 @@ Module.constant('datePickerConfig', {
   template: 'templates/datepicker.html',
   view: 'month',
   views: ['year', 'month', 'date', 'hours', 'minutes'],
-  step: 5
+  step: 5,
+    dismiss: false
 });
 
 function getVisibleMinutes(date, step) {
@@ -98,7 +99,7 @@ function getVisibleHours(date) {
   return hours;
 }
 
-Module.directive('datePicker', function datePickerDirective(datePickerConfig) {
+Module.directive('datePicker', function datePickerDirective(datePickerConfig, $parse) {
 
   //noinspection JSUnusedLocalSymbols
   return {
@@ -116,6 +117,7 @@ Module.directive('datePicker', function datePickerDirective(datePickerConfig) {
       scope.view = attrs.view || datePickerConfig.view;
       scope.now = new Date();
       scope.template = attrs.template || datePickerConfig.template;
+      var dismiss = attrs.dismiss ? $parse(attrs.dismiss)(scope) : datePickerConfig.dismiss;
 
       var step = parseInt(attrs.step || datePickerConfig.step, 10);
 
@@ -164,7 +166,11 @@ Module.directive('datePicker', function datePickerDirective(datePickerConfig) {
         }
 
         if (nextView) {
-          scope.setView(nextView);
+            scope.setView(nextView);
+        } else {
+            if (dismiss) {
+                angular.element('.dropdown-toggle').parent().removeClass('open');
+            }
         }
       };
 
@@ -412,7 +418,7 @@ Module.directive('dateTime', function ($compile, $document, $filter, dateTimeCon
         scope.$digest();
 
         scope.$on('setDate', function (event, date, view) {
-          updateInput(event);
+            updateInput(event);
           if (dismiss && views[views.length - 1] === view) {
             clear();
           }
