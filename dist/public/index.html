@@ -20,6 +20,8 @@
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
+
+    <!-- TODO: vendor css that grunt is not building properly -->
     <link rel="stylesheet" href="bower_components/angular-datepicker/dist/index.css" />
     <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date-plus-default-theme.css"/>
@@ -36,17 +38,20 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
+
     <script src="app/29820028.vendor.js"></script>
 
-        <!-- build:js({.tmp,client}) app/app.js -->
-        <script src="app/7fb7b9fd.app.js"></script>
-          <!-- injector:js -->
-          <script src="app/main/main.controller.js"></script>
-          <script src="app/main/main.js"></script>
-          <script src="components/modal/modal.service.js"></script>
-          <script src="components/navbar/navbar.controller.js"></script>
-          <!-- endinjector -->
-        <!-- endbuild -->
+    <!-- TODO: vendor script that grunt is not building properly -->
     <script src="bower_components/angular-datepicker/dist/index.js"></script>
-</body>
+
+    <!-- build:js({.tmp,client}) app/app.js -->
+      <script src="app/d6bddf5b.app.js"></script>
+      <!-- injector:js -->
+      <script src="app/main/main.controller.js"></script>
+      <script src="app/main/main.js"></script>
+      <script src="components/modal/modal.service.js"></script>
+      <script src="components/navbar/navbar.controller.js"></script>
+      <!-- endinjector -->
+    <!-- endbuild -->
+  </body>
 </html>
