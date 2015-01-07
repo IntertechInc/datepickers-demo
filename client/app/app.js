@@ -20,6 +20,7 @@ angular.module('datePickerDemoApp', [
           closeButtonHtml: "<i class='fa fa-times'></i>",
           buttonIconHtml: "<i class='fa fa-calendar'></i>",
           nextLinkHtml: "<i class='fa fa-chevron-right'></i>",
-          prevLinkHtml: "<i class='fa fa-chevron-left'></i>"
+          prevLinkHtml: "<i class='fa fa-chevron-left'></i>",
+          dayAbbreviations: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
       });
   });

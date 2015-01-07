@@ -5,13 +5,15 @@ angular.module('datePickerDemoApp').controller('MainCtrl', function ($scope) {
   	$scope.selectedDate = new Date();
 
   	var disabledDates = [
-  		'01/08/2015'
+  		(new Date()).setDate($scope.selectedDate.getDate() + 1)
   	].map(function(value) {
   	    return (new Date(value)).toDateString();
   	});
 
   	$scope.angularDatePicker = {
   	    dateFilter: function (d) {
+  	        if (!d) return true;
+
   	        // disable weekends
   	        var dayIdx = d.getDay();
   	        if (dayIdx === 0 || dayIdx === 6) {

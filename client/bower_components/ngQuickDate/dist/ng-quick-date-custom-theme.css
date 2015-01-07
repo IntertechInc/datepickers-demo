@@ -1,0 +1,153 @@
+.quickdate {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 15px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+    .quickdate input,
+    .quickdate select {
+        font-size: 13px;
+    }
+
+.quickdate-button {
+    background: #ffffff;
+    color: #333333;
+    border: solid 1px #cccccc;
+    box-shadow: outset 0 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+    .quickdate-button:hover {
+        text-decoration: underline;
+    }
+
+        .quickdate-button:hover i {
+            text-decoration: none;
+        }
+
+    .quickdate-button i {
+        padding-right: 4px;
+    }
+
+.quickdate-popup {
+    margin-top:2px;
+    color: #333333;
+    font-size: 15px;
+    /*background-color: #fafafa;*/
+    background-color: white;
+    border: solid 1px #dddddd;
+    border-radius: 3px;
+    /*-webkit-box-shadow: 0px 10px 30px rgba(25, 25, 25, 0.92);
+    -moz-box-shadow: 0px 10px 30px rgba(25, 25, 25, 0.92);
+    box-shadow: 0px 10px 30px rgba(25, 25, 25, 0.92);*/
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    padding: 4px 12px 8px 8px;
+    width: 280px;
+}
+
+.quickdate-action-link {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+    .quickdate-action-link:visited,
+    .quickdate-action-link:hover {
+        color: #333333;
+    }
+
+.quickdate-next-month i {
+    padding-left: 10px;
+}
+
+.quickdate-prev-month i {
+    padding-right: 10px;
+}
+
+table.quickdate-calendar {
+    /*border: solid 1px #ccc;*/
+    background-color: #ffffff;
+
+}
+
+    table.quickdate-calendar th,
+    table.quickdate-calendar td {
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+        table.quickdate-calendar td:hover {
+            background-color: #e6e6e6;
+        }
+
+        table.quickdate-calendar td.other-month {
+            background-color: #dbdbdb;
+            color: #808080;
+        }
+
+            table.quickdate-calendar td.other-month:hover {
+                background-color: #c7c7c7;
+            }
+
+        table.quickdate-calendar td.disabled-date {
+            background-color: rgba(194, 71, 4, 0.8) !important;
+            color: #ddd;
+            /*color: red;*/
+        }
+
+            table.quickdate-calendar td.disabled-date:hover {
+                /*background-color: inherit;*/
+                /*cursor: default;*/
+                cursor: not-allowed;
+            }
+
+        table.quickdate-calendar td.selected {
+            /*background-color: #b0ccde;*/
+            background-color: #0093d0;
+            color:white !important;
+            font-weight: bold;
+        }
+
+        table.quickdate-calendar td.is-today {
+            /*color: #b58922;*/
+            color: #E49544;
+            font-weight: bold;
+        }
+
+            table.quickdate-calendar td.is-today.disabled-date {
+                color: #929292;
+                font-weight: normal;
+            }
+
+.quickdate-popup-footer {
+    margin: 3px 1px 0;
+}
+
+.quickdate-clear {
+    display: inline-block;
+    padding: 2px 4px;
+    background-color: #ffffff;
+    color: #333333;
+    border: solid 1px #cccccc;
+    box-shadow: outset 0 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+    .quickdate-clear:hover {
+        background-color: #f2f2f2;
+    }
+
+span.quickdate-month {
+    font-weight: bold;
+}
+
+a.quickdate-close {
+    font-size: 14px;
+    padding: 4px;
+}

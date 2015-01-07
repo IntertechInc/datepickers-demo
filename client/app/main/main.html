@@ -82,12 +82,12 @@
 
         <div class="col-sm-12">
             <h3 class="page-header"><a href="https://github.com/adamalbrecht/ngQuickDate">ngQuickDate</a></h3>
-            <quick-datepicker ng-model="selectedDate" date-filter="angularDatePicker.dateFilter" disable-timepicker="true"></quick-datepicker>
+            <quick-datepicker ng-model="selectedDate" date-filter="angularDatePicker.dateFilter" disable-timepicker="true" disable-clear-button="true"></quick-datepicker>
             <p>
                 <ul>
                     <li>Light-weight. No additional dependencies beside Angular.</li>
                     <li>Can disable specific days of the week (e.g. weekends).</li>
-                    <li>Can disable specific dates.</li>
+                    <li>Can disable specific dates (currently set to disable "tomorrow").</li>
                 </ul>
             </p>
         </div>
