@@ -16,9 +16,9 @@ angular.module('datePickerDemoApp').controller('MainCtrl', function ($scope) {
 
   	        // disable weekends
   	        var dayIdx = d.getDay();
-  	        if (dayIdx === 0 || dayIdx === 6) {
-  	            return false;
-  	        }
+  	        //if (dayIdx === 0 || dayIdx === 6) {
+  	        //    return false;
+  	        //}
   	        if (disabledDates.indexOf(d.toDateString()) > -1) {
   	            return false;
   	        }
